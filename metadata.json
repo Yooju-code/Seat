@@ -1,0 +1,6 @@
+{
+  "name": "클래스 자리 바꾸기",
+  "description": "초보 선생님도 간편하게 사용할 수 있는 교실 자리 바꾸기 프로그램입니다. 직관적인 빈자리(X) 지정, 무작위 학생 배치, 아름다운 카드 애니메이션을 제공합니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
