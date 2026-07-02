@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "ClassroomConfig": {
+      "title": "ClassroomConfig",
+      "description": "Configuration and seating arrangement for the classroom",
+      "type": "object",
+      "properties": {
+        "studentCount": {
+          "type": "integer",
+          "description": "Number of students in the class"
+        },
+        "studentList": {
+          "type": "array",
+          "description": "List of student names"
+        },
+        "blockedSeats": {
+          "type": "array",
+          "description": "Array of 20 booleans representing X (blocked) seats"
+        },
+        "fixedSeats": {
+          "type": "object",
+          "description": "Mapping from seat number (index) to student name for locked seats"
+        },
+        "assignedSeats": {
+          "type": "array",
+          "description": "Array of 20 entries representing the currently assigned student names (or 'X' or null)"
+        }
+      },
+      "required": ["studentCount", "studentList", "blockedSeats", "fixedSeats", "assignedSeats"]
+    }
+  },
+  "firestore": {
+    "classroom_configs/{configId}": {
+      "schema": "ClassroomConfig",
+      "description": "Collection storing the class config and seating charts"
+    }
+  }
+}
